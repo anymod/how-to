@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1 v-text="title" class="display-3"></h1>
+  <p v-text="message" class="lead"></p>
+  <hr class="my-4">
+	<button @click="getQuote()" class="btn btn-primary btn-lg">
+		Generate a quotation
+	</button>
+	<blockquote v-if="quoteText" class="blockquote">
+		<p v-text="quoteText" class="mb-0"></p>
+		<footer v-text="quoteAuthor || 'Unknown'" class="blockquote-footer"></footer>
+	</blockquote>
+</div>
